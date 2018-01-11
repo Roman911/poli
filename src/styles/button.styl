@@ -1,0 +1,26 @@
+.buttons, .buttons2
+  display flex
+  justify-content space-between
+  z-index 3
+  .fa-arrow-left, .fa-arrow-right
+    position absolute
+    top 50%
+    z-index 4
+  .fa-arrow-left
+    left -6%
+  .fa-arrow-right
+    right -6%
+
+.btn
+  padding 5px
+  border 5px solid $lil - 20%
+  border-radius 50%
+  background none
+  cursor pointer
+  &:hover
+    border 5px solid $lil - 50%
+.fa
+  color $lil
+  font-size 1.4rem
+  &:hover
+    color $lil - 20%

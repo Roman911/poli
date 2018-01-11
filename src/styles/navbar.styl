@@ -1,0 +1,26 @@
+@import'./variables.styl';
+
+.navbar
+  position fixed
+  top 0
+  width 100%
+  //background-color alpha($pink, .3)
+  background-color $pink
+  z-index 5
+
+  .page-content
+    > ul
+      display flex
+      justify-content space-between
+      > li
+        width 100%
+        height 100%
+        text-align center
+        cursor pointer
+        > a
+          color $white
+        &:hover
+          background-color $lil - 10%
+
+    .button
+      padding 20px

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bakery website</title>
+  <style>
+    #map {
+      width: 100%;
+      height: 700px;
+    }
+  </style>
+</head>
+<body>
+<div class="page-wrapper">
+  <section class="lisa">
+    <a href="#" id="up" class="lisa__up">
+      <img src="./../assets/image/lisa.png" alt="">
+      <div class="lisa__text">
+        <p>Вгору</p>
+      </div>
+    </a>
+  </section>
+  <nav class="navbar">
+    <div class="page-content">
+      <ul>
+        <li>
+          <a href="#navhome">
+            <div class="button">
+              <p>Головна</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#navabout">
+            <div class="button">
+              <p>Поліна</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#navbd">
+            <div class="button">
+              <p>День Народження</p>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#navcont">
+            <div class="button">
+              <p>CONTACT</p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <section id="navhome" class="header bg">
+    <div class="head">
+      <div class="head__text">
+        <h1>Поліна</h1>
+        <h2>День Народження</h2>
+        <h2>12.02.2018</h2>
+      </div>
+      <div id="clockdiv" class="clock">
+        <div class="clock__block">
+          <span class="days"></span>
+          <div class="clock__smalltext">Days</div>
+        </div>
+        <div class="clock__block">
+          <span class="hours"></span>
+          <div class="clock__smalltext">Hours</div>
+        </div>
+        <div class="clock__block">
+          <span class="minutes"></span>
+          <div class="clock__smalltext">Minutes</div>
+        </div>
+        <div class="clock__block">
+          <span class="seconds"></span>
+          <div class="clock__smalltext">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="navabout" class="about">
+    <div class="page-content">
+      <div class="head">
+        <h2>Поліна</h2>
+      </div>
+      <div class="slider">
+        <div class="buttons">
+          <button class="buttons__controls btn fa fa-arrow-left" id="previous"></button>
+          <button class="buttons__controls btn fa fa-arrow-right" id="next"></button>
+        </div>
+        <div class="slider__slides">
+          <div class="slider__slides_slide showing"></div>
+          <div class="slider__slides_slide"></div>
+          <div class="slider__slides_slide"></div>
+          <div class="slider__slides_slide"></div>
+          <div class="slider__slides_slide"></div>
+        </div>
+      </div>
+      <div class="text">
+        <p>You all know us. And we all know you. We are getting married lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+  </section>
+  <section class="invited bg">
+    <div class="page-content">
+      <div class="text">
+        <h1>You Are Invited</h1>
+        <h3>Of course...</h3>
+      </div>
+    </div>
+  </section>
+  <section id="navbd" class="restaurant">
+    <div class="page-content">
+      <div class="head">
+        <h2>День Народження!!!</h2>
+      </div>
+      <div class="slider2">
+        <div class="buttons2">
+          <button class="buttons2__controls btn fa fa-arrow-left" id="previous2"></button>
+          <button class="buttons2__controls btn fa fa-arrow-right" id="next2"></button>
+        </div>
+        <div class="slider2__slides">
+          <div class="slider2__slides_slide showing"></div>
+          <div class="slider2__slides_slide"></div>
+          <div class="slider2__slides_slide"></div>
+          <div class="slider2__slides_slide"></div>
+          <div class="slider2__slides_slide"></div>
+        </div>
+      </div>
+      <div class="grid-container">
+        <div class="content-block col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <h2>When</h2>
+          <p>Wedding Ceremony - 2:00pm</p>
+          <p>Reception & Dinner - 5:00pm</p>
+        </div>
+        <div class="content-block col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <h2>Where</h2>
+          <p>Some place, an address</p>
+          <p>Some where, some address</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="navcont" class="map">
+    <div id="map">
+
+    </div>
+    <script>
+      function initMap() {
+        const element = document.getElementById('map');
+        let options = {
+          zoom: 15,
+          center: {lat: 50.511127, lng: 30.781253}
+        };
+
+        let myMap = new google.maps.Map(element, options);
+
+        let markers = [
+          {
+            coordinates: {lat: 50.517639, lng: 30.783297},
+            image: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+            info: '<h3>Home</h3><p>вул. Київська, 245</p>'
+          },
+          {
+            coordinates: {lat: 50.506415, lng: 30.778972},
+            info: '<h3>Restorane</h3><p>вул. Шолом-Алейхема, 66</p>'
+          }
+        ];
+
+        function addMarker(properties) {
+          let marker = new google.maps.Marker({
+            position: properties.coordinates,
+            map: myMap,
+            icon: properties.image
+          });
+
+          if (properties.image) {
+            marker.setIcon(properties.image);
+          }
+
+          if (properties.info) {
+            let InfoWindow = new google.maps.InfoWindow({
+              content: properties.info
+            });
+
+            marker.addListener('click', function () {
+              InfoWindow.open(myMap, marker);
+            });
+          }
+
+        }
+
+        for (let i = 0; i < markers.length; i++) {
+          addMarker(markers[i]);
+        }
+
+      }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvO1i5pye0smqiCv2GXqdY7axnMctUnQs&callback=initMap">
+    </script>
+  </section>
+  <section class="footer">
+    <h3>День Народження Поліни!!!</h3>
+  </section>
+
+</div>
+</body>
+</html>
