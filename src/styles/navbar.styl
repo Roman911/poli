@@ -1,12 +1,13 @@
 @import'./variables.styl';
 
 .navbar
-  position fixed
+  position absolute
   top 0
+  left 0
   width 100%
-  //background-color alpha($pink, .3)
-  background-color $pink
+  background-color alpha($pink, .3)
   z-index 5
+
 
   .page-content
     > ul
@@ -24,3 +25,19 @@
 
     .button
       padding 20px
+
+.fixed
+  position fixed
+  background-color $lil
+  box-shadow 0 0 4px 4px $Gray
+
+
+.navbar.fixed
+  animation-name example
+  animation-duration .5s
+
+@keyframes example
+  0%
+    transform translateY(-100%)
+  100%
+    transform translateY(0%)

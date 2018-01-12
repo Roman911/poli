@@ -8,14 +8,18 @@
   width 100%
   z-index 3
 
+
 .btn
   padding 20px 15px
   border 1px solid $lil - 80%
   background-color $lil - 20%
   background: radial-gradient(ellipse at center, alpha($lil, 1) 0%, alpha($lil - 40%, 1) 100%)
   cursor pointer
+
   &:hover
     background: radial-gradient(ellipse at center, alpha($lil, 1) 0%, alpha($lil - 80%, 1) 100%)
+    box-shadow 0 0 4px 4px $Gray + 20%
+
 .fa
   color $white
   font-size 1.4rem
