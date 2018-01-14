@@ -1,0 +1,37 @@
+.card
+  border 1px solid $pink -20%
+  background-color $pink
+  margin 10px
+  box-shadow 0 0 10px 3px $Gray + 20%
+  transition .5s
+  &__head
+    padding 10px 0
+    text-align center
+  &__img
+    padding 10px 5px
+    > img
+      max-width 100%
+  &__description
+    padding 10px
+
+  &__buttons
+    display flex
+    justify-content center
+    padding 15px 20px
+    font-size 1rem
+
+    .btn_my
+      padding 10px
+      color black
+      font-size 1rem
+      cursor pointer
+      transition .5s
+      &:hover
+        color red
+        transform scale(1.1, 1.1)
+        transition .5s
+
+  &:hover
+    box-shadow 0 0 10px 7px $Gray + 20%
+    transform scale(1.01, 1.01)
+    transition .5s
