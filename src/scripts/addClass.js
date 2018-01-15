@@ -1,21 +1,27 @@
 function addClass(selector) {
-  const rootElement = document.querySelectorAll(selector);
-  const button = rootElement.querySelectorAll('.btn');
-  const modal = rootElement.querySelectorAll('.addClass');
+  const rootElement = document.querySelector(selector);
+  const button = rootElement.querySelector('.btn');
+  const button2 = rootElement.querySelector('.btn2');
+  const modal = rootElement.querySelector('.addClass');
 
-  function addClassActive() {
-    modal.classList.toggle('active');
+  function addClass() {
+    modal.classList.add('showed');
   }
 
-  button.addEventListener('click', addClassActive);
+  function removeClass() {
+    modal.classList.remove('showed');
+  }
 
   button.addEventListener('click', function () {
-
-    if (addClassActive == true) {
-    } else {
-      addClassActive
-    }
+    console.log(2);
+    addClass()
   });
+
+  button2.addEventListener('click', function () {
+    console.log(4);
+    removeClass()
+  });
+
 }
 
 export default addClass;
