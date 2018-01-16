@@ -1,25 +1,44 @@
-function addClass(selector) {
+function addClass(selector, btn, modal2) {
   const rootElement = document.querySelector(selector);
-  const button = rootElement.querySelector('.btn');
-  const button2 = rootElement.querySelector('.btn2');
-  const modal = rootElement.querySelector('.addClass');
+  const button = rootElement.querySelector(btn);
+  const button2 = rootElement.querySelector('.btnClosed');
+  const addClass1 = rootElement.querySelector('.addClass');
+  const modal = rootElement.querySelector(modal2);
 
   function addClass() {
-    modal.classList.add('showed');
+    addClass1.classList.add('showed');
+  }
+
+  function addModal() {
+    modal.classList.add('showed2');
   }
 
   function removeClass() {
-    modal.classList.remove('showed');
+    addClass1.classList.remove('showed');
+  }
+
+  function removeModal() {
+    modal.classList.remove('showed2');
+  }
+
+  function hiden() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  function removeHiden() {
+    document.body.style.overflow = '';
   }
 
   button.addEventListener('click', function () {
-    console.log(2);
-    addClass()
+    addClass();
+    addModal();
+    hiden();
   });
 
   button2.addEventListener('click', function () {
-    console.log(4);
-    removeClass()
+    removeClass();
+    removeModal();
+    removeHiden();
   });
 
 }

@@ -1,34 +1,38 @@
+@import'./variables.styl';
+
 .card
-  border 1px solid $pink -20%
-  background-color $pink
+  border 1px solid $pink
+  background-color $lil
+  background linear-gradient(to bottom, alpha($lil + 50%, .7) 0%, alpha($lil + 90%, .2) 100%)
   margin 10px
   box-shadow 0 0 10px 3px $Gray + 20%
   transition .5s
   &__head
     padding 10px 0
     text-align center
+    > h3
+      color $lil - 20%
   &__img
-    padding 10px 5px
+    padding 5px 15px
     > img
       max-width 100%
   &__description
     padding 10px
-
+    > p
+      font-style italic
+      color $pink - 20%
   &__buttons
-    display flex
-    justify-content center
     padding 15px 20px
     font-size 1rem
 
-    .btn_my
-      padding 10px
-      color black
+    .btn
+      padding 7px 45px
+      color $pink - 30%
       font-size 1rem
       cursor pointer
       transition .5s
       &:hover
-        color red
-        transform scale(1.1, 1.1)
+        transform scale(1.01, 1.01)
         transition .5s
 
   &:hover
