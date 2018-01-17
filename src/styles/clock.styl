@@ -22,3 +22,16 @@
       font-size 3rem
   &__smalltext
     color $pink - 50%
+
+@media screen and (max-width: $mobile)
+  .clock
+    left 50%
+    transform translate(-50%, -50%)
+    &__block
+      margin 5px
+      width 60px
+      padding 10px 0
+      > span
+        font-size 2rem
+    &__smalltext
+      font-size .7rem

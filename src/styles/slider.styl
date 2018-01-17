@@ -1,3 +1,5 @@
+@import'./variables.styl';
+
 .slider
   margin 50px auto
   width 80%
@@ -21,16 +23,31 @@
       transition opacity 1s
       background-size cover
       &:nth-of-type(1)
-        background-image url('./../assets/image/bg_1.jpg')
+        background-image url('./../assets/image/slide_01.jpg')
       &:nth-of-type(2)
-        background-image url('./../assets/image/img_01.jpg')
+        background-image url('./../assets/image/slide_02.jpg')
       &:nth-of-type(3)
-        background-image url('./../assets/image/img_02.jpg')
+        background-image url('./../assets/image/slide_03.jpg')
       &:nth-of-type(4)
-        background-color blue
+        background-image url('./../assets/image/slide_04.jpg')
       &:nth-of-type(5)
-        background-color purple
+        background-image url('./../assets/image/slide_05.jpg')
+      &:nth-of-type(6)
+        background-image url('./../assets/image/slide_06.jpg')
+      &:nth-of-type(7)
+        background-image url('./../assets/image/slide_07.jpg')
+      &:nth-of-type(8)
+        background-image url('./../assets/image/slide_08.jpg')
+      &:nth-of-type(9)
+        background-image url('./../assets/image/slide_09.jpg')
+      &:nth-of-type(10)
+        background-image url('./../assets/image/slide_10.jpg')
 
 .showing
   opacity 1
   z-index 2
+
+@media screen and (max-width: $mobile)
+  .slider
+    width 95%
+    margin 35px auto

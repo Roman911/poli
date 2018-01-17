@@ -1,6 +1,8 @@
+@import'./variables.styl';
+
 .slider2
   margin 50px auto
-  width 70%
+  width 80%
   height 100%
   position relative
   box-shadow 0 0 10px 7px $Gray + 20%
@@ -42,3 +44,8 @@
   justify-content space-between
   top 50%
   z-index 3
+
+@media screen and (max-width: $mobile)
+  .slider2
+    width 95%
+    margin 35px auto
