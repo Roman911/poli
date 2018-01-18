@@ -903,7 +903,7 @@ a {
   animation-name: example;
   animation-duration: 0.5s;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .navbar {
     position: relative;
   }
@@ -955,17 +955,19 @@ a {
   position: relative;
   box-sizing: border-box;
   height: 100vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 .header .head {
+  width: 50%;
   text-align: center;
 }
 .header .head__text {
-  position: absolute;
-  left: 30%;
-  top: 35%;
-  -ms-transform: translate(-50%);
-      transform: translate(-50%);
-  width: 40%;
+  padding: 50px 40px;
   color: #fb14b5;
   font-style: italic;
 }
@@ -975,17 +977,17 @@ a {
 }
 .header .head__text > h2 {
   font-size: 1.5rem;
-  margin-top: 20px;
-  margin-bottom: 60px;
+  margin-top: 60px;
 }
 .header.bg {
   background-image: url(assets/images/img_01.jpg);
 }
 @media screen and (max-width: 768px) {
+  .header .head {
+    width: 100%;
+  }
   .header .head__text {
-    left: 50%;
-    top: 25%;
-    width: 90%;
+    padding: 50px 40px 20px;
   }
   .header .head__text > h1 {
     font-size: 1.5rem;
@@ -994,17 +996,14 @@ a {
   .header .head__text > h2 {
     font-size: 1.2rem;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 }
 .clock {
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  bottom: 10%;
-  left: 30%;
-  -ms-transform: translateX(-50%);
-      transform: translateX(-50%);
+  -ms-flex-pack: center;
+      justify-content: center;
 }
 .clock__block {
   display: -ms-flexbox;
@@ -1028,11 +1027,6 @@ a {
   color: #de049c;
 }
 @media screen and (max-width: 768px) {
-  .clock {
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-  }
   .clock__block {
     margin: 5px;
     width: 60px;
@@ -1280,6 +1274,12 @@ a {
   color: #fff;
   font-size: 1.4rem;
 }
+@media screen and (max-width: 768px) {
+  .buttons,
+  .buttons2 {
+    display: none;
+  }
+}
 .invited {
   position: relative;
   padding: 250px 10px;
@@ -1399,7 +1399,7 @@ a {
 .blocking.showed .modal {
   position: fixed;
   border: 1px solid #9d9990;
-  width: 50%;
+  width: 60%;
   max-height: 100%;
   top: 50%;
   left: 50%;
@@ -1445,6 +1445,7 @@ a {
 }
 .blocking.showed .modal .header__text > h3 {
   color: #b780f3;
+  text-transform: uppercase;
 }
 .blocking.showed .modal .header__text > p {
   margin: 15px 0 70px;
@@ -1458,9 +1459,13 @@ a {
 .blocking.showed .modal .header.modal_5.showed2,
 .blocking.showed .modal .header.modal_6.showed2,
 .blocking.showed .modal .header.modal_7.showed2,
-.blocking.showed .modal .header.modal_8.showed2 {
+.blocking.showed .modal .header.modal_8.showed2,
+.blocking.showed .modal .header.modal_9.showed2,
+.blocking.showed .modal .header.modal_10.showed2 {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
   height: 100%;
 }
 .blocking.showed .relative {
@@ -1474,9 +1479,19 @@ a {
       transform: translate(-50%, -50%);
   padding: 10px 50px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+  .blocking.showed .modal {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 992px) {
   .blocking.showed .modal {
     width: 90%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .blocking.showed .modal {
+    width: 80%;
   }
   .blocking.showed .modal .header__text {
     display: none;
@@ -1495,6 +1510,7 @@ a {
   text-align: center;
 }
 .card__head > h3 {
+  text-transform: uppercase;
   color: #b780f3;
 }
 .card__img {
@@ -1509,6 +1525,7 @@ a {
 .card__description > p {
   text-align: center;
   font-style: italic;
+  text-transform: uppercase;
   color: #fc6dd1;
 }
 .card__buttons {

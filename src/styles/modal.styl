@@ -15,7 +15,7 @@
   .modal
     position fixed
     border 1px solid $Gray + 40%
-    width 50%
+    width 60%
     max-height 100%
     top 50%
     left 50%
@@ -49,6 +49,7 @@
         padding 20px 40px
         > h3
           color $lil - 20%
+          text-transform uppercase
         > p
           margin 15px 0 70px
           font-style italic
@@ -60,8 +61,11 @@
     .header.modal_5.showed2,
     .header.modal_6.showed2,
     .header.modal_7.showed2,
-    .header.modal_8.showed2
+    .header.modal_8.showed2,
+    .header.modal_9.showed2,
+    .header.modal_10.showed2
       display flex
+      flex-direction row
       height 100%
 
   .relative
@@ -73,10 +77,19 @@
       transform translate(-50%, -50%)
       padding 10px 50px
 
-@media screen and (max-width: $mobile)
+@media screen and (max-width: $laptops)
+  .blocking.showed
+    .modal
+      width 70%
+
+@media screen and (max-width: $tablets)
   .blocking.showed
     .modal
       width 90%
+@media screen and (max-width: $mobile)
+  .blocking.showed
+    .modal
+      width 80%
       .header
         &__text
           display none

@@ -66,6 +66,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 (0, _addClass2.default)('.gifts', '.btn_6', '.modal_6');
 (0, _addClass2.default)('.gifts', '.btn_7', '.modal_7');
 (0, _addClass2.default)('.gifts', '.btn_8', '.modal_8');
+(0, _addClass2.default)('.gifts', '.btn_9', '.modal_9');
+(0, _addClass2.default)('.gifts', '.btn_10', '.modal_10');
 (0, _addBlind2.default)('.navbar', '.btn__blind', '.btnClosedBlind1');
 (0, _addBlind2.default)('.navbar', '.btn__blind', '.btnClosedBlind2');
 (0, _addBlind2.default)('.navbar', '.btn__blind', '.btnClosedBlind3');

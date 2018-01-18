@@ -24,6 +24,8 @@ addClass('.gifts', '.btn_5', '.modal_5');
 addClass('.gifts', '.btn_6', '.modal_6');
 addClass('.gifts', '.btn_7', '.modal_7');
 addClass('.gifts', '.btn_8', '.modal_8');
+addClass('.gifts', '.btn_9', '.modal_9');
+addClass('.gifts', '.btn_10', '.modal_10');
 addBlind('.navbar', '.btn__blind', '.btnClosedBlind1');
 addBlind('.navbar', '.btn__blind', '.btnClosedBlind2');
 addBlind('.navbar', '.btn__blind', '.btnClosedBlind3');
